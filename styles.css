@@ -1,6 +1,13 @@
-
-body {
-	font-size: 0;
+@font-face {
+    font-family: D-DIN;
+    src: url(fonts/D-DIN.otf);
+}
+  
+body .epoch-container {
+    font-family: D-DIN;
+    font-weight: 700;
+    width:90%;
+    margin: auto auto 50px;
 }
 *,
 *::before,
@@ -8,4 +15,173 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.logo{
+    text-align: center;
+    margin: 50px auto 30px;
+}   
+
+img{
+    width: 50%;
+}
+
+.text{
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.text::before , .text:after {
+    content: '';
+    background-image: url(img/logo_leftDec.png);
+    background-position:right ;
+    background-repeat: no-repeat;
+    width: calc((100% - 165px)/2);
+    max-width: 42%;
+    height: 9px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.text:after{
+    background-position: left;
+    background-image: url(img/logo_rightDec.png);
+    right: 0;
+    left: auto;
+    
+}
+
+.four-row{
+    margin: 30px auto 50px;
+}
+
+.nav-item{
+    width: 25%;
+    text-align: center;
+}
+
+.nav-item .nav-link{
+    font-size: 16px;
+    color: #000000;
+}
+
+.nav-item .nav-link:hover{
+    color: #000000;
+}
+
+.nav-item .nav-link:focus{
+    text-decoration: underline;
+    color: #000000;
+}
+
+.container .row{
+    margin: 56px auto 80px;
+}
+
+.container .row>*{
+    padding: 0;
+} 
+
+.row img{
+    width: auto;
+}
+
+.row button{
+    width: fit-content;
+    align-self: center;
+    margin-top: 23px;
+    background: #3C3C3C;
+    border-radius: 5px;
+    color: #FFFFFF;
+    width: 246px;
+    height: 41px;
+}
+
+.row .right-btn{
+    background: #1478FB;
+    border: none;
+    font-size: 12px;
+}
+
+.row .short-right-btn{
+    font-size: 16px;
+    width: 154px;
+    height: auto;
+    padding: 7px 21px;
+    line-height: 18px;
+}
+
+.row .small-right{
+    width: 468px;
+}
+
+
+.bottom-section{
+    margin: 30px auto 50px;
+}
+
+.bottom-section button{ 
+    height: 28px;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: auto;
+    border: none;
+    width: 167px;
+}
+
+.bottom-section .blue-btn{
+    background: #1478FB;
+}
+
+.bottom-section .black-btn{
+    background: #3C3C3C;
+    font-size: 16px;
+    width: 175px;
+}
+
+.bottom-section .red-btn{
+    background: #C4554E;
+}
+
+.epoch-container p{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+
+
+@media (max-width: 700px){
+    body .epoch-container{
+        width: 100%;
+    }
+
+    .text{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .four-row, .bottom-section .first-row{
+        display: none!important;
+    }
+
+    .bottom-section{
+        margin-top: 0px;
+    }
+
+    .second-row{
+        flex-direction: column;
+    }
+
+    .second-row .col-4{
+        width: 100%!important;
+    }
+
+    .second-row img{
+        margin-top: 58px;
+    }
+    
 }
